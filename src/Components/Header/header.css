@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans Arabic', sans-serif
+}
+
+nav {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #515151;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_elements {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.navbar-links .navbar_elements li {
+    color: white;
+    float: left;
+    list-style: none;
+    padding: 12px 50px;
+}
+
+.navbar_elements img {
+    padding-left: 20px;
+}
+
+.brand_logo {
+    width: 3rem;
+    height: 2rem;
+    padding: 10px 30px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar_elements img:not(:first-child) {
+        display: none;
+    } 
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar_elements {
+        clear: right;
+    }
+    
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    
+    .navbar-links ul li {
+        text-align: center;
+    }
+    
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    
+    .navbar-links.active {
+        display: flex;
+    }
+    
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    
+    .navbar-links ul li{
+        text-align: center;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    
+    .brand_logo{
+        margin: auto;
+    }
+}
